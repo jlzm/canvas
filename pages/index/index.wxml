@@ -1,0 +1,14 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="df jc-sb topbar">
+    <view catch:tap="cancelOperating" class="topbar-item">CANCEL</view>
+    <view catch:tap="clearPlan" class="topbar-item">REDO</view>
+  </view>
+  <canvas class="canvas-plan" canvas-id="canvasPlan" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend" bindtouchcancel="touchcancel" bindlongtap="touchlongtap" binderror="toucherror"></canvas>
+  <canvas class="canvas-bg" canvas-id="canvasBg"></canvas>
+  <view class="df jc-sb bottombar">
+    <view catch:tap="changeTool" data-tool="line" class="bottombar-item">LINE</view>
+    <view catch:tap="changeTool" data-tool="rect" class="bottombar-item">RECT</view>
+    <view catch:tap="changeTool" data-tool="round" class="bottombar-item">ROUND</view>
+  </view>
+</view>

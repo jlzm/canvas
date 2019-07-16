@@ -1,0 +1,31 @@
+/**index.wxss**/
+
+.container {
+  width: 100vw;
+}
+
+.canvas-bg, .canvas-plan {
+  border: 1rpx solid #ccc;
+  width: 100vw;
+  height: 40vh;
+}
+
+.canvas-plan {
+  position: fixed;
+  top: 82rpx;
+  left: 0;
+  z-index: 99;
+}
+
+.topbar, .bottombar {
+  padding: 20rpx;
+}
+
+.topbar-item {
+  color: #03a9f4;
+}
+
+.bottombar-item {
+  color: #607d8b;
+}
+
