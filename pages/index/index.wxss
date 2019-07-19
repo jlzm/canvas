@@ -4,17 +4,27 @@
   width: 100vw;
 }
 
-.canvas-bg, .canvas-plan {
-  border: 1rpx solid #ccc;
+.canvas-bg, .canvas-plan, .canvas-overlay {
   width: 100vw;
   height: 40vh;
 }
 
-.canvas-plan {
+.canvas-plan, .canvas-overlay {
   position: fixed;
   top: 82rpx;
   left: 0;
-  z-index: 99;
+}
+
+.canvas-bg {
+  z-index: 1;
+}
+
+.canvas-plan {
+  z-index: 10;
+}
+
+.canvas-overlay {
+  z-index: 11;
 }
 
 .topbar, .bottombar {
@@ -25,7 +35,14 @@
   color: #03a9f4;
 }
 
-.bottombar-item {
+/* .bottombar-item {
+} */
+
+.tool-plan {
   color: #607d8b;
+}
+
+.tool-fill {
+  color: #ff9800;
 }
 

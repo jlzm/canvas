@@ -4,11 +4,10 @@
     <view catch:tap="cancelOperating" class="topbar-item">CANCEL</view>
     <view catch:tap="clearPlan" class="topbar-item">REDO</view>
   </view>
-  <canvas class="canvas-plan" canvas-id="canvasPlan" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend" bindtouchcancel="touchcancel" bindlongtap="touchlongtap" binderror="toucherror"></canvas>
   <canvas class="canvas-bg" canvas-id="canvasBg"></canvas>
+  <canvas class="canvas-plan" canvas-id="canvasPlan"></canvas>
+  <canvas class="canvas-overlay" canvas-id="canvasOverlay" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend" bindtouchcancel="touchcancel" bindlongtap="touchlongtap" binderror="toucherror"></canvas>
   <view class="df jc-sb bottombar">
-    <view catch:tap="changeTool" data-tool="line" class="bottombar-item">LINE</view>
-    <view catch:tap="changeTool" data-tool="rect" class="bottombar-item">RECT</view>
-    <view catch:tap="changeTool" data-tool="round" class="bottombar-item">ROUND</view>
+    <view wx:for="{{toolData.list}}" wx:key="{{index}}" catch:tap="changeTool" data-tool="{{item.tool}}" data-index="{{index}}" class="bottombar-item {{toolData.index == index ? 'tool-fill': 'tool-plan'}}">{{item.name}}</view>
   </view>
 </view>
